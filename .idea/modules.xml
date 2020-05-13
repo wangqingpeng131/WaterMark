@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/WaterMark.iml" filepath="$PROJECT_DIR$/WaterMark.iml" group="WaterMark" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="WaterMark/app" />
-      <module fileurl="file://$PROJECT_DIR$/croplibrary/croplibrary.iml" filepath="$PROJECT_DIR$/croplibrary/croplibrary.iml" group="WaterMark/croplibrary" />
     </modules>
   </component>
 </project>

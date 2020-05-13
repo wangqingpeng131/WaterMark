@@ -46,7 +46,6 @@ class EdActivity : BaseActivity(), TemplateCallback {
             val saveUri = Util().saveTemporaryBitmap(edit_photo_group)
             val intent = Intent(this, SaveActivity::class.java)
             intent.putExtra(IMAGEURI, saveUri.toString())
-            Log.i("topwise","isChange2: $isChange")
             intent.putExtra(CHANGE, isChange)
             startActivity(intent)
         }

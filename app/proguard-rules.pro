@@ -254,3 +254,19 @@
     public static final ** CREATOR;
 }
 -keep class com.android.vending.billing.**
+-keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
+-keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}
+
+# Most of volatile fields are updated with AFU and should not be mangled
+-keepclassmembernames class kotlinx.** {
+    volatile <fields>;
+}
+-dontwarn kotlin.Unit
+-keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
+-keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}
+-keepnames class kotlinx.coroutines.android.AndroidDispatcherFactory {}
+-keep class kotlinx.coroutines.android.AndroidExceptionPreHandler
+-keep class kotlinx.coroutines.android.AndroidDispatcherFactory
+-keep class kotlinx.coroutines.android.AndroidDispatcherFactory {*;}
+-keepnames class kotlinx.coroutines.test.internal.TestMainDispatcherFactory {}
+-keepnames class kotlinx.coroutines.android.AndroidExceptionPreHandler {}

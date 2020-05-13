@@ -38,8 +38,7 @@ class MainActivity : BaseActivity(), MoPubInterstitial.InterstitialAdListener {
     )
     private val albumPermissions = arrayOf(
             Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            Manifest.permission.CAMERA
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
     )
 
     override fun onInterstitialLoaded(interstitial: MoPubInterstitial?) {
@@ -171,7 +170,7 @@ class MainActivity : BaseActivity(), MoPubInterstitial.InterstitialAdListener {
                 if (grantResults.isNotEmpty()) {
                     grantResults.forEach {
                         val boolean = it == PackageManager.PERMISSION_GRANTED
-                        if (!boolean) return@forEach
+                        if (!boolean) return
                     }
                     permissionUtil.openCamera(this)
                 } else {
@@ -197,7 +196,7 @@ class MainActivity : BaseActivity(), MoPubInterstitial.InterstitialAdListener {
                 if (grantResults.isNotEmpty()) {
                     grantResults.forEach {
                         val boolean = it == PackageManager.PERMISSION_GRANTED
-                        if (!boolean) return@forEach
+                        if (!boolean) return
                     }
                     permissionUtil.openAlbum(this)
                 } else {
