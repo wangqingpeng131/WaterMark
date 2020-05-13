@@ -1,1 +1,1 @@
-include ':app', ':croplibrary'
+include ':app'
