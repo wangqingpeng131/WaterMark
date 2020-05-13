@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/main_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/photo_watermark_n"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/main_set"
+            app:layout_constraintStart_toEndOf="@id/main_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/main_set"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:paddingStart="9dp"
+            android:paddingEnd="9dp"
+            android:src="@drawable/ic_setting"
+            app:layout_constraintEnd_toStartOf="@id/main_coins_group"
+            app:layout_constraintStart_toEndOf="@id/main_title" />
+
+        <FrameLayout
+            android:id="@+id/main_coins_group"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/main_set"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/main_gold_num"
+                android:layout_width="62dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/main_shop_bg"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingStart="5dp"
+                android:textColor="@color/dominant_hue"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                tools:text="100" />
+
+            <ImageView
+                android:id="@+id/main_coins_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_coins" />
+
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/main_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:src="@drawable/img_home"
+        app:layout_constraintTop_toBottomOf="@id/main_tool_bar"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <LinearLayout
+        android:id="@+id/photo_bt"
+        android:layout_width="190dp"
+        android:layout_height="46dp"
+        android:background="@drawable/main_bt_bg"
+        android:backgroundTint="@color/golden"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/camera_bt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_bg"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_start" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/start"
+            android:textColor="@color/dominant_hue"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/camera_bt"
+        android:layout_width="190dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/main_bt_bg"
+        android:backgroundTint="#FF424242"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photo_bt">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_photo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/photo"
+            android:textColor="@color/golden" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

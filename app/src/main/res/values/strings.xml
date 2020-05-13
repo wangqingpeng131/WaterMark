@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">WaterMark</string>
+    <string name="feedback">Contact Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="need_photo_permission">We would use your storage to save photos</string>
+    <string name="need_photo_to_edit">Please select photo to continue</string>
+    <string name="please_allow_photo_permission">"You have declined access to photos, please active it in Settings>Privacy>Photos."</string>
+    <string name="save_photo_is_Success">Success</string>
+    <string name="get_external_directory_fail">Get external directory fail ,the reason is sdCard nonexistence or sdCard mount fail !"</string>
+    <string name="download_tip_text">The App is stopped update, we \nrecommend to download our new App.</string>
+    <string name="download_introduce">It is the Advantages for You while Install the \n“Followers Hub” - the home &amp; main App! Enjoy \nthe fast and safe followers &amp; likes boost!</string>
+    <string name="photo_watermark">PHOTO\nWATERMARK</string>
+    <string name="photo_watermark_n">photo watermark</string>
+    <string name="photo">Photo</string>
+    <string name="start">Start</string>
+    <string name="save">Save</string>
+    <string name="watermark">watermark</string>
+    <string name="color">Color</string>
+    <string name="zero">0</string>
+    <string name="one_hundred_percent">100%</string>
+</resources>
