@@ -18,6 +18,7 @@ class SplashActivity : BaseActivity() {
                 SplashSp.setShow(false)
             }
             startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+            finish()
         }
     }
 }

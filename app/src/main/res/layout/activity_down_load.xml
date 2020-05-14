@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/v_download_bg_ic"
+    tools:context=".plugin.downLoad.DownLoadActivity">
+    <ImageView
+        android:id="@+id/image_download_back"
+        android:layout_width="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/v_back_ic"
+        android:layout_marginLeft="13dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="134dp"
+        android:background="@drawable/v_bg_white_ic"
+        android:layout_height="127dp">
+
+
+        <ImageView
+            android:id="@+id/image_icon"
+            android:layout_width="92dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:layout_height="92dp"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/v_dowbload_tips_bg"
+        android:layout_height="65dp">
+
+        <TextView
+            android:text="@string/download_tip_text"
+            android:layout_centerHorizontal="true"
+            android:textColor="#3f3f3f"
+            android:textSize="14sp"
+            android:paddingLeft="40dp"
+            android:paddingRight="31dp"
+            android:drawablePadding="15dp"
+            android:drawableLeft="@drawable/v_tips_ic"
+            android:layout_marginTop="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:gravity="center"
+
+        android:background="@color/v_c_status_bar"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/tv_download_introduce"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#1D1D1D"
+            android:text="@string/download_introduce"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:id="@+id/ll_download_hint"
+            android:layout_below="@id/tv_download_introduce"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignStart="@id/tv_download_introduce"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#3F3F3F"
+                android:textSize="14sp"
+                android:drawablePadding="15dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/down_hitp_left_ic"
+                android:text="FREE 200 coins with first install."
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#3F3F3F"
+                android:textSize="14sp"
+                android:drawablePadding="15dp"
+                android:layout_marginTop="10dp"
+
+                android:drawableLeft="@drawable/down_hitp_left_ic"
+                android:text="Get extra 10% bonus with Follower Hub."
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#3F3F3F"
+                android:textSize="14sp"
+                android:drawablePadding="15dp"
+                android:layout_marginTop="10dp"
+
+                android:drawableLeft="@drawable/down_hitp_left_ic"
+                android:text="Once download forever use and always active."
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#3F3F3F"
+                android:textSize="14sp"
+                android:drawablePadding="15dp"
+                android:layout_marginTop="10dp"
+
+                android:drawableLeft="@drawable/down_hitp_left_ic"
+                android:text="Professional maintenance service and updating."
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#3F3F3F"
+                android:textSize="14sp"
+                android:drawablePadding="15dp"
+                android:layout_marginTop="10dp"
+
+                android:drawableLeft="@drawable/down_hitp_left_ic"
+                android:text="Quick feedback and one-on-one CRM service."
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+
+            android:layout_below="@id/ll_download_hint"
+            android:id="@+id/ll_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+
+            android:orientation="horizontal"
+            >
+
+            <ProgressBar
+
+                android:id="@+id/pb_c"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="200dp"
+                tools:progress="40"
+                android:progressDrawable="@drawable/v_progressbar_bg"
+                android:layout_height="8dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_c_progress"
+                android:textColor="#FFFF3D63"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:minWidth="40dp"
+                android:text="0%"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rl_download_start"
+            android:layout_below="@id/ll_download_hint"
+            android:layout_width="332dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/v_like_sel_bg"
+            android:layout_height="96dp">
+            <ImageView
+                android:id="@+id/iv_download_ic"
+                android:layout_width="wrap_content"
+                android:src="@drawable/v_download_ic"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="28dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_download_now"
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/v_c_status_bar"
+                android:text="Download Now"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/iv_download_ic"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="11dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/v_c_status_bar"
+                android:text="+200"
+                android:drawableLeft="@drawable/v_coin_ic"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:drawablePadding="6dp"
+                android:layout_toRightOf="@id/tv_download_now"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="6dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tv_download_now"
+                android:textSize="10sp"
+                android:textColor="#FFBABA"
+                android:layout_marginTop="7dp"
+                android:layout_alignStart="@id/tv_download_now"
+                android:text="Keep Growth and Stay Popular With Most Likes"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

@@ -10,35 +10,35 @@ fun getDefaultGold(): Int {
     }
 }
 const val PAYMENT = 30
-const val MINI = "get.instagram.collage.instalike.getlikesforinstagram.followers.packofone"
-const val LARGE = "get.instagram.collage.instalike.getlikesforinstagram.followers.packoftwo"
-const val SUPER = "get.instagram.collage.instalike.getlikesforinstagram.followers.packofthree"
-const val MINI1 = "get.instagram.collage.instalike.getlikesforinstagram.followers.packoffour"
-const val LARGE2 = "get.instagram.collage.instalike.getlikesforinstagram.followers.packoffive"
-const val SUPER3 = "get.instagram.collage.instalike.getlikesforinstagram.followers.packofsix"
-const val SUPER4 = "get.instagram.collage.instalike.getlikesforinstagram.followers.packofseven"
-const val SUPER5 = "get.instagram.collage.instalike.getlikesforinstagram.followers.packofeight"
-const val IAP = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0CSR07C3vBH0vsYgVWAGhh0vIGvY67Uorx1m/cDpkYEDbOVBg7a19JHy9GTKVd1LaciG7JVyGje2SRzon/3/xYK6bPqkb1z0zmp9ivB0lBGx4kGlxYHdvZc3Xd3zDJm0l/WNQ3oBqzQvL7giDo34l228Bg3h5TDQesjne72fLwXdoF9OyLFE99dRxCaEHnSNMq2+p1FRp25vPCVg8PMK00sBGGXWzIZK2QjoxEFtgsVkhYAzU70jAFYepKuAFxCPOOXbnwAWbLm8qWeYYfvGENY3lc8rPdEp4Xwkv5L+JJqLx+xrRf3jjBBqyR8Z6hB9D2n5TRZ7Ed4aaIJo90usbQIDAQAB"
+const val MINI = "com.getwatermark.photomaker.newpacka"
+const val LARGE = "com.getwatermark.photomaker.newpackb"
+const val SUPER = "com.getwatermark.photomaker.newpackc"
+const val MINI1 = "com.getwatermark.photomaker.newpackd"
+const val LARGE2 = "com.getwatermark.photomaker.newpacky"
+const val SUPER3 = "com.getwatermark.photomaker.newpackf"
+const val SUPER4 = "com.getwatermark.photomaker.newpackg"
+const val SUPER5 = "com.getwatermark.photomaker.newpackz"
+const val IAP = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmvUPxTwOO6ABUFoLNdO/1x19gxn+1Np7f2c9XBvrRUUARsqY2ZbMcNJFcsJZ0oZYnB8GQCW1N64gxbISiNe3pf0GJWy272oCrf3Ib66ZHVUEcBtAmldH72sCnGc+igyjbE0IuXJyjlMce+D9PGaHPLY3+C8C5LjT4bGbpasrq2no3nJMEClse/uYFE3vgHnx2WhyTjY/iYGis9D4vSPc1UXfyQeeEuxqdDbAZ8Oc9XYxjeD/0E0S/Ca7ZAtDPKMx2AcY9iK2j2A8zacdo4OWiZcDqLpwYNYTYnCsx1qT21ZVy3G5Anj6aDRjkU/8Rv5EmYr9Cj67z5V9TVWAjnQvewIDAQAB"
 val INAPP_SKUS = listOf(MINI, LARGE, SUPER, MINI1, LARGE2, SUPER3, SUPER4, SUPER5)
-const val NUM_ONE = 400
-const val NUM_TWO = 1100
-const val NUM_THREE = 2200
-const val NUM_FOUR = 3300
-const val NUM_FIVE = 4500
-const val NUM_SIX = 6000
-const val NUM_SEVEN = 7500
-const val NUM_EIGHT = 9500
+const val NUM_ONE = 200
+const val NUM_TWO = 800
+const val NUM_THREE = 1400
+const val NUM_FOUR = 2000
+const val NUM_FIVE = 2600
+const val NUM_SIX = 3500
+const val NUM_SEVEN = 4800
+const val NUM_EIGHT = 6800
 val COIN_NUMS = listOf(NUM_ONE, NUM_TWO, NUM_THREE, NUM_FOUR,
         NUM_FIVE, NUM_SIX, NUM_SEVEN, NUM_EIGHT)
 val PRICE_LIST = listOf(
-        "$ 1.99",
-        "$ 4.99",
+        "$ 0.99",
+        "$ 3.99",
+        "$ 6.99",
         "$ 9.99",
-        "$ 14.99",
+        "$ 12.99",
+        "$ 15.99",
         "$ 20.99",
-        "$ 27.99",
-        "$ 35.99",
-        "$ 44.99"
+        "$ 25.99"
 )
 const val FILEPROVIDER = ".fileProvider"
 const val IMAGEURI = "imageUri"
@@ -47,12 +47,11 @@ const val CAMERA_REQUEST = 52
 const val PICK_REQUEST = 53
 const val PERMISSIONS_REQUEST_CAMERA = 502
 const val PERMISSIONS_REQUEST_ALBUM = 503
-const val PERMISSIONS_REQUEST_READ_WRITE_EXTERNAL_STORAGE = 885
 
 const val DAOLIANG = "df7cf09df94a4438922b1a91b3c0f20e"
-const val TOKEN = "vxkpdx41fu9s"
+const val TOKEN = "corb6jtyx88w"
 const val PIAPP_LAUNCH ="opoikj"
-const val FEEDBACK = "NedSilverberglike@gmail.com"
-const val PRIVACY_LINK = "https://privacyshower.github.io/LovelyFrame/LovelyFrame-Privacy_Agreement.htm"
+const val FEEDBACK = "RaisaLanzaapp@gmail.com"
+const val PRIVACY_LINK = "https://privacyshower.github.io/WaterMark/WaterMark-Privacy_Agreement.htm"
 const val GOLD = "gold"
 const val COIN = "coin"

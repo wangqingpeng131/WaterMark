@@ -18,4 +18,9 @@
     <string name="color">Color</string>
     <string name="zero">0</string>
     <string name="one_hundred_percent">100%</string>
+
+    <string name="v_facebook_app_id" translatable="false">xxxxxxxxxxxxxx</string>
+    <string name="v_fb_login_protocol_scheme" translatable="false">fbxxxxxxxxxxxxxxx</string>
+
+
 </resources>

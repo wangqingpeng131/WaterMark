@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <set android:ordering="together">
+            <objectAnimator
+                android:duration="@android:integer/config_shortAnimTime"
+                android:propertyName="scaleX"
+                android:repeatCount="infinite"
+                android:repeatMode="reverse"
+                android:valueFrom="0.8"
+                android:valueTo="1.2"
+                android:valueType="floatType"
+                />
+            <objectAnimator
+                android:duration="@android:integer/config_shortAnimTime"
+                android:propertyName="scaleY"
+                android:repeatCount="infinite"
+                android:repeatMode="reverse"
+                android:valueFrom="0.8"
+                android:valueTo="1.2"
+                android:valueType="floatType"
+                />
+            <objectAnimator
+                android:duration="@android:integer/config_shortAnimTime"
+                android:propertyName="rotation"
+                android:repeatCount="infinite"
+                android:repeatMode="reverse"
+                android:valueFrom="-20"
+                android:valueTo="20"
+                android:valueType="floatType"
+                />
+
+        </set>
+
+
+    </item>
+
+    <item>
+        <set android:ordering="together">
+            <objectAnimator
+                android:duration="@android:integer/config_mediumAnimTime"
+                android:propertyName="scaleX"
+                android:repeatCount="infinite"
+                android:repeatMode="reverse"
+                android:valueFrom="1"
+                android:valueTo="0.9"
+                android:valueType="floatType"
+                />
+            <objectAnimator
+                android:duration="@android:integer/config_mediumAnimTime"
+                android:propertyName="scaleY"
+                android:repeatCount="infinite"
+                android:repeatMode="reverse"
+                android:valueFrom="1"
+                android:valueTo="0.9"
+                android:valueType="floatType"
+                />
+            <objectAnimator
+                android:duration="@android:integer/config_shortAnimTime"
+                android:propertyName="rotation"
+                android:valueTo="0"
+                android:valueType="floatType"
+                />
+
+        </set>
+    </item>
+
+</selector>

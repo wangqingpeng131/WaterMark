@@ -97,13 +97,13 @@
 
     <LinearLayout
         android:id="@+id/photo_bt"
-        android:layout_width="190dp"
+        android:layout_width="140dp"
         android:layout_height="46dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/main_bt_bg"
-        android:backgroundTint="@color/golden"
+        android:backgroundTint="#FF424242"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@id/camera_bt"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/camera_bt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/main_bg"
         app:layout_constraintVertical_chainStyle="packed">
@@ -118,23 +118,21 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="@string/start"
-            android:textColor="@color/dominant_hue"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textColor="@color/golden"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/camera_bt"
-        android:layout_width="190dp"
+        android:layout_width="140dp"
         android:layout_height="46dp"
-        android:layout_marginTop="30dp"
         android:background="@drawable/main_bt_bg"
         android:backgroundTint="#FF424242"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/photo_bt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/photo_bt">
+        app:layout_constraintStart_toEndOf="@id/photo_bt"
+        app:layout_constraintTop_toTopOf="@id/photo_bt">
 
         <ImageView
             android:layout_width="24dp"
@@ -148,6 +146,25 @@
             android:text="@string/photo"
             android:textColor="@color/golden" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_getlikes"
+        android:gravity="center_vertical"
+        android:paddingStart="30dp"
+        android:paddingBottom="20dp"
+        android:stateListAnimator="@animator/daoliang_btn_anim"
+        android:text="Get More Likes and Followers"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photo_bt" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

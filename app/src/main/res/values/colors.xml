@@ -10,6 +10,8 @@
     <color name="golden">#FFFFC491</color>
     <color name="text_and_color_regulator_bg">#FF414141</color>
 
+    <color name="v_c_status_bar">#FFFFFF</color>
+
     <color name="white">#FFFFFF</color> <!--白色 -->
     <color name="red">#FFD0021B</color>
     <color name="orange">#FFF5A623</color>
