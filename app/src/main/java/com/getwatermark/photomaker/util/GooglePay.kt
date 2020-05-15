@@ -46,7 +46,7 @@ class GooglePay private constructor(private var callback: Callback?) {
     }
 
     //启动支付
-    fun startPay(commodity: Commodity, activity: Activity) {
+    fun startPay(commodity: Wcm, activity: Activity) {
 
         val buyIntentBundle: Bundle
         var pendingIntent: PendingIntent? = null

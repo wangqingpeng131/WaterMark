@@ -10,7 +10,7 @@ import android.net.Uri
 import android.os.Environment
 import android.view.View
 import com.getwatermark.photomaker.ui.MyApplication
-import com.getwatermark.photomaker.ui.ShoppingActivity
+import com.getwatermark.photomaker.ui.Shpa
 import java.io.File
 import java.io.FileOutputStream
 import java.text.DecimalFormat
@@ -30,7 +30,7 @@ class Util {
             AlertDialog.Builder(context)
                     .setMessage("Not enough coins, would you like to get more?")
                     .setPositiveButton("OK"
-                    ) { _, _ -> context.startActivity(Intent(context, ShoppingActivity::class.java)) }
+                    ) { _, _ -> context.startActivity(Intent(context, Shpa::class.java)) }
                     .setNegativeButton("Cancel"
                     ) { dialog, _ -> dialog.dismiss() }
                     .show()
@@ -123,65 +123,5 @@ class Util {
             return bmp
         }
 
-        /*fun getRealPathFromUri(context: Context, uri: Uri): String? {
-            val sdkVersion = Build.VERSION.SDK_INT
-            return if (sdkVersion >= 19) {
-                getRealPathFromUriAboveApi19(context, uri)
-            } else {
-                getRealPathFromUriBelowAPI19(context, uri)
-            }
-        }*/
-
-        /*private fun getRealPathFromUriBelowAPI19(context: Context, uri: Uri): String? {
-            return getDataColumn(context, uri, null, null)
-        }*/
-
-
-        /*@TargetApi(Build.VERSION_CODES.KITKAT)
-        private fun getRealPathFromUriAboveApi19(context: Context, uri: Uri): String? {
-            var filePath: String? = null
-            if (DocumentsContract.isDocumentUri(context, uri)) {
-                val documentId = DocumentsContract.getDocumentId(uri)
-                if (isMediaDocument(uri)) {
-                    val id = documentId.split(":".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()[1]
-                    val selection = MediaStore.Images.Media._ID + "=?"
-                    val selectionArgs = arrayOf(id)
-                    filePath = getDataColumn(context, MediaStore.Images.Media.EXTERNAL_CONTENT_URI, selection, selectionArgs)
-                } else if (isDownloadsDocument(uri)) {
-                    val contentUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), java.lang.Long.valueOf(documentId))
-                    filePath = getDataColumn(context, contentUri, null, null)
-                }
-            } else if ("content".equals(uri.scheme!!, ignoreCase = true)) {
-                filePath = getDataColumn(context, uri, null, null)
-            } else if ("file" == uri.scheme) {
-                filePath = uri.path
-            }
-            return filePath
-        }*/
-
-        /* private fun isDownloadsDocument(uri: Uri): Boolean {
-             return "com.android.providers.downloads.documents" == uri.authority
-         }
-
-         private fun isMediaDocument(uri: Uri): Boolean {
-             return "com.android.providers.media.documents" == uri.authority
-         }*/
-
-        /*private fun getDataColumn(context: Context, uri: Uri, selection: String?, selectionArgs: Array<String>?): String? {
-            var path: String? = null
-            val projection = arrayOf(MediaStore.Images.Media.DATA)
-            var cursor: Cursor? = null
-            try {
-                cursor = context.contentResolver.query(uri, projection, selection, selectionArgs, null)
-                if (cursor != null && cursor.moveToFirst()) {
-                    val columnIndex = cursor.getColumnIndexOrThrow(projection[0])
-                    path = cursor.getString(columnIndex)
-                }
-            } catch (e: Exception) {
-                cursor?.close()
-            }
-
-            return path
-        }*/
     }
 }

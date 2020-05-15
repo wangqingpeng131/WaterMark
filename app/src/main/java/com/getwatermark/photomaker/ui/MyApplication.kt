@@ -9,9 +9,8 @@ import com.didi.virtualapk.PluginManager
 import com.downloader.PRDownloader
 import com.downloader.PRDownloaderConfig
 import com.getwatermark.photomaker.BuildConfig
-import com.getwatermark.photomaker.plugin.KernelId
-import com.getwatermark.photomaker.plugin.PCache
-import com.getwatermark.photomaker.util.TOKEN
+import com.getwatermark.photomaker.lscj.Ken
+import com.getwatermark.photomaker.lscj.Sc
 
 class MyApplication : Application() {
     companion object {
@@ -45,7 +44,7 @@ class MyApplication : Application() {
         val environment: String
         val logLevel: LogLevel
         if (BuildConfig.DEBUG || BuildConfig.Test) {
-            PCache.setIsDebugMode(true)
+            Sc.setIsDebugMode(true)
             environment = AdjustConfig.ENVIRONMENT_SANDBOX
             logLevel = LogLevel.VERBOSE
         }else {
@@ -57,12 +56,12 @@ class MyApplication : Application() {
                 .build()
         PRDownloader.initialize(this, mPRDownloaderConfig)
         super.onCreate()
-        PCache.setContext(this)
+        Sc.setContext(this)
 
         // adjust
         // adjust
-        val debugMode: Boolean = PCache.isDebugMode()
-        val token: String = KernelId.ADJUST_TOKEN
+        val debugMode: Boolean = Sc.isDebugMode()
+        val token: String = Ken.ADJUST_TOKEN
         val config = AdjustConfig(this, token, environment)
         config.setLogLevel(logLevel)
         config.setSendInBackground(true)

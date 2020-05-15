@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="@drawable/v_download_bg_ic"
-    tools:context=".plugin.downLoad.DownLoadActivity">
+    tools:context=".lscj.vbvj.Wdj">
     <ImageView
         android:id="@+id/image_download_back"
         android:layout_width="wrap_content"

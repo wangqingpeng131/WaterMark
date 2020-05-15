@@ -45,10 +45,10 @@ abstract class BaseAdapter<T> constructor(dataList: List<T>) : RecyclerView.Adap
         private val viewSparseArray: SparseArray<View> = SparseArray()
         var mPosition = 0
         fun setOnClickListener(
-                clickListener: ListenerWithPosition.OnClickWithPositionListener<VH>,
+                clickListener: Pos.OnClickWithPositionListener<VH>,
                 vararg viewId: Int
         ): VH {
-            val listener = ListenerWithPosition(mPosition, this)
+            val listener = Pos(mPosition, this)
             listener.setOnClickListener(clickListener)
             viewId.forEach {
                 val v = getView<View>(it)

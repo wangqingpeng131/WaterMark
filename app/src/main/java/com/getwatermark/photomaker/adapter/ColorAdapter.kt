@@ -2,7 +2,6 @@ package com.getwatermark.photomaker.adapter
 
 import android.content.Context
 import android.graphics.drawable.ColorDrawable
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
@@ -18,7 +17,7 @@ import com.getwatermark.photomaker.util.dipToPx
 class ColorAdapter constructor(private val context: Context, private val templateCallback: TemplateCallback,
                                dataList: List<ColorBean>) :
         BaseAdapter<ColorBean>(dataList),
-        ListenerWithPosition.OnClickWithPositionListener<BaseAdapter.VH> {
+        Pos.OnClickWithPositionListener<BaseAdapter.VH> {
     var mPosition = 0
     override fun convert(holder: VH, t: ColorBean, position: Int, payloads: MutableList<Any>) {
         val content = holder.getView<ImageView>(R.id.item_color_select_content)

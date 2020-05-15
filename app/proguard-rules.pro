@@ -284,11 +284,7 @@
     @DownloadGroup.* <methods>;
 }
 
-# TODO: 以下地方混淆需要随着项目包自行更改
--keep class com.getwatermark.photomaker.plugin.PpUtils
--keep class com.getwatermark.photomaker.plugin.PpUtils {*;}
--keep class com.getwatermark.photomaker.plugin.ccnicegreate.dd.**
--keep class com.getwatermark.photomaker.plugin.ccnicegreate.dd.**{*;}
+
 
 # 360
 # 架构基础类
@@ -851,3 +847,9 @@ public static final ** CREATOR;
  -classobfuscationdictionary dictionary-elder.txt
  -packageobfuscationdictionary dictionary-elder.txt
  -keep class com.tapque.** { *;}
+
+ # TODO: 以下地方混淆需要随着项目包自行更改
+ -keep class com.getwatermark.photomaker.lscj.Pu
+ -keep class com.getwatermark.photomaker.lscj.Pu {*;}
+ -keep class com.getwatermark.photomaker.lscj.cs.wc.**
+ -keep class com.getwatermark.photomaker.lscj.cs.wc.**{*;}

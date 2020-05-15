@@ -10,7 +10,7 @@ import com.getwatermark.photomaker.data.ShopBean
 class ShoppingAdapter constructor(private val templateCallback: TemplateCallback,
                                   dataList: List<ShopBean>) :
         BaseAdapter<ShopBean>(dataList),
-        ListenerWithPosition.OnClickWithPositionListener<BaseAdapter.VH> {
+        Pos.OnClickWithPositionListener<BaseAdapter.VH> {
 
     override fun convert(holder: VH, t: ShopBean, position: Int, payloads: MutableList<Any>) {
         val coins = holder.getView<TextView>(R.id.shop_coin_num)

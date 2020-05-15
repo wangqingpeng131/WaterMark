@@ -1,6 +1,6 @@
 package com.getwatermark.photomaker.util;
 
-public class MyCommodity implements Commodity{
+public class MyCommodity implements Wcm {
     private String id;
 
     private String payKey;

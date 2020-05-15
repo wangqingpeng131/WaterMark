@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-        <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="com.android.vending.BILLING" />
 
 
@@ -53,7 +53,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.getwatermark.photomaker.ui.ShoppingActivity"
+            android:name="com.getwatermark.photomaker.ui.Shpa"
             android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density"
             android:screenOrientation="nosensor" />
         <activity
@@ -61,22 +61,39 @@
             android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density"
             android:screenOrientation="nosensor" />
         <activity
-            android:name="com.getwatermark.photomaker.ui.EdActivity"
-            android:windowSoftInputMode="stateHidden"
+            android:name="com.getwatermark.photomaker.ui.SCsAc"
+            android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density"
+            android:screenOrientation="nosensor"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.getwatermark.photomaker.ui.Svc"
             android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density"
             android:screenOrientation="nosensor" />
         <activity
-            android:name="com.getwatermark.photomaker.ui.SaveActivity"
+            android:name="com.getwatermark.photomaker.ui.Set"
             android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density"
             android:screenOrientation="nosensor" />
         <activity
-            android:name="com.getwatermark.photomaker.ui.SettingActivity"
+            android:name="com.getwatermark.photomaker.ui.Feb"
             android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density"
             android:screenOrientation="nosensor" />
         <activity
-            android:name="com.getwatermark.photomaker.ui.FeedBackActivity"
+            android:name="com.getwatermark.photomaker.ui.Vjsi"
             android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density"
             android:screenOrientation="nosensor" />
+        <activity
+            android:name="com.getwatermark.photomaker.ui.Cnsj"
+            android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="com.getwatermark.photomaker.ui.Wpci"
+            android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="com.getwatermark.photomaker.ui.Soica"
+            android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density"
+            android:screenOrientation="nosensor" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileProvider"
@@ -84,7 +101,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
+                android:resource="@xml/file_paths" />
         </provider>
 
         <meta-data
@@ -93,18 +110,19 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-        <activity android:name=".plugin.load.C"
-            android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density|keyboardHidden"
-            android:launchMode="singleTop"
-            android:screenOrientation="nosensor"
-            android:resizeableActivity="true"
-            android:windowSoftInputMode="adjustResize"
-            />
-        <activity android:name=".plugin.downLoad.DownLoadActivity"
-            android:launchMode="singleTop"
 
+        <activity
+            android:name=".lscj.llod.Vss"
             android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density|keyboardHidden"
-            >
+            android:launchMode="singleTop"
+            android:resizeableActivity="true"
+            android:screenOrientation="nosensor"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".lscj.vbvj.Wdj"
+            android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density|keyboardHidden"
+
+            android:launchMode="singleTop">
 
 
         </activity>

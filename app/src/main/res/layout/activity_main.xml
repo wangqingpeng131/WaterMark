@@ -29,7 +29,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/photo_watermark_n"
-            android:textAllCaps="true"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -46,7 +45,13 @@
             android:src="@drawable/ic_setting"
             app:layout_constraintEnd_toStartOf="@id/main_coins_group"
             app:layout_constraintStart_toEndOf="@id/main_title" />
-
+        <TextView
+            android:id="@+id/funny"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <FrameLayout
             android:id="@+id/main_coins_group"
             android:layout_width="wrap_content"
@@ -118,6 +123,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="@string/start"
+            android:textAllCaps="true"
             android:textColor="@color/golden"
             android:textSize="16sp" />
     </LinearLayout>
@@ -144,12 +150,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="@string/photo"
+            android:textAllCaps="true"
             android:textColor="@color/golden" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/btn_getlikes"
@@ -157,10 +163,10 @@
         android:paddingStart="30dp"
         android:paddingBottom="20dp"
         android:stateListAnimator="@animator/daoliang_btn_anim"
-        android:text="Get More Likes and Followers"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
