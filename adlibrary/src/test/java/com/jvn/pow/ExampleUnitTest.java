@@ -1,4 +1,4 @@
-package com.b.module;
+package com.jvn.pow;
 
 import org.junit.Test;
 

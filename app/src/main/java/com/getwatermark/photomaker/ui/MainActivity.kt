@@ -18,8 +18,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.FileProvider
 import com.adjust.sdk.Adjust
 import com.adjust.sdk.AdjustEvent
-import com.b.module.MoPubAd
-import com.b.module.MoPubDefault
+import com.jvn.pow.VCi
 import com.getwatermark.photomaker.R
 import com.getwatermark.photomaker.lscj.*
 import com.getwatermark.photomaker.lscj.cs.Vjsd
@@ -28,7 +27,6 @@ import com.getwatermark.photomaker.lscj.llod.Vss
 import com.getwatermark.photomaker.lscj.wwzz.Ecjs
 import com.getwatermark.photomaker.lscj.wwzz.Mcs
 import com.getwatermark.photomaker.util.*
-import kotlinx.android.synthetic.main.activity_main.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -399,7 +397,7 @@ class MainActivity : BaseActivity() {
         instance.setAdjustFacebookFails("")
         instance.setAdjustFacebookStart("")
         // 广告类名
-        instance.setPluginAdClassName(MoPubAd::class.java.name)
+        instance.setPluginAdClassName(VCi::class.java.name)
         // feedback 邮箱
         instance.saveFeedBackEmail(Ken.FEED_BACKE_MAIL)
         // 数数事件存储

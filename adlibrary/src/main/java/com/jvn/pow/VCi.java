@@ -1,4 +1,4 @@
-package com.b.module;
+package com.jvn.pow;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import org.json.JSONObject;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * @date 2019-05-14
  * A smile is the best business card.
  */
-public class MoPubAd extends AppCompatActivity {
+public class VCi extends AppCompatActivity {
 
     public static String SP_NAME = "a_d";
 
@@ -39,7 +40,6 @@ public class MoPubAd extends AppCompatActivity {
      * Native unitId
      */
     public static String AD_UNIT_ID_FOR_NATIVE;
-
 
 
     public static final String TYPE = "type";
@@ -63,7 +63,21 @@ public class MoPubAd extends AppCompatActivity {
     private static int toEasyCloseTimes = 0;
 
 
-    private void nativeMessage(Intent intent, int type, String nativeAdUnitId, final MoPubDefault moPubDefault) {
+    private void nativeMessage(Intent intent, int type, String nativeAdUnitId, final Wpc moPubDefault) {
+        switch (132) {
+            case 125:
+                try {
+                    JSONObject sjvi = new JSONObject();
+                    String si22wu8 = sjvi.getString("wijvn");
+                    String A2348s = sjvi.getString("wi234u");
+                    String vsi98 = sjvi.getString("isvc987nsu");
+                } catch (Exception i) {
+                    i.printStackTrace();
+                }
+                break;
+            default:
+                break;
+        }
         String message = intent.getStringExtra(MESSAGE);
         String title = intent.getStringExtra(TITLE);
         if (TextUtils.isEmpty(message) && TextUtils.isEmpty(title)) {
@@ -91,6 +105,20 @@ public class MoPubAd extends AppCompatActivity {
             nativeView.findViewById(R.id.btn_mopub_native_ad_install).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    switch (132) {
+                        case 125:
+                            try {
+                                JSONObject sjvi = new JSONObject();
+                                String si22wu8 = sjvi.getString("wijvn");
+                                String A2348s = sjvi.getString("wi234u");
+                                String vsi98 = sjvi.getString("isvc987nsu");
+                            } catch (Exception i) {
+                                i.printStackTrace();
+                            }
+                            break;
+                        default:
+                            break;
+                    }
                     toFinish(1);
 
                 }
@@ -99,19 +127,47 @@ public class MoPubAd extends AppCompatActivity {
             nativeView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    switch (132) {
+                        case 125:
+                            try {
+                                JSONObject sjvi = new JSONObject();
+                                String si22wu8 = sjvi.getString("wijvn");
+                                String A2348s = sjvi.getString("wi234u");
+                                String vsi98 = sjvi.getString("isvc987nsu");
+                            } catch (Exception i) {
+                                i.printStackTrace();
+                            }
+                            break;
+                        default:
+                            break;
+                    }
                     toFinish(1);
                     //moPubDefault.showOfferWall(gpUserId);
                 }
             });
         } else {
             parent.addView(nativeView);
-            MoPubDefault.getDefault().getAdjustListener().showNativeAd(entranceType);
+            Wpc.getDefault().getAdjustListener().showNativeAd(entranceType);
         }
 
         View closeView = findViewById(R.id.iv_mopub_ad_native_close);
         closeView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                switch (132) {
+                    case 125:
+                        try {
+                            JSONObject sjvi = new JSONObject();
+                            String si22wu8 = sjvi.getString("wijvn");
+                            String A2348s = sjvi.getString("wi234u");
+                            String vsi98 = sjvi.getString("isvc987nsu");
+                        } catch (Exception i) {
+                            i.printStackTrace();
+                        }
+                        break;
+                    default:
+                        break;
+                }
                 userFinish();
             }
         });
@@ -193,6 +249,20 @@ public class MoPubAd extends AppCompatActivity {
         rootView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                switch (132) {
+                    case 125:
+                        try {
+                            JSONObject sjvi = new JSONObject();
+                            String si22wu8 = sjvi.getString("wijvn");
+                            String A2348s = sjvi.getString("wi234u");
+                            String vsi98 = sjvi.getString("isvc987nsu");
+                        } catch (Exception i) {
+                            i.printStackTrace();
+                        }
+                        break;
+                    default:
+                        break;
+                }
                 nativeView.callOnClick();
             }
         });
@@ -200,6 +270,20 @@ public class MoPubAd extends AppCompatActivity {
     }
 
     private void setNumber(String message, LinearLayout mNumberMessageContainerLl, TextView mNumberTv) {
+        switch (132) {
+            case 125:
+                try {
+                    JSONObject sjvi = new JSONObject();
+                    String si22wu8 = sjvi.getString("wijvn");
+                    String A2348s = sjvi.getString("wi234u");
+                    String vsi98 = sjvi.getString("isvc987nsu");
+                } catch (Exception i) {
+                    i.printStackTrace();
+                }
+                break;
+            default:
+                break;
+        }
         if (TextUtils.equals("v", message)) {
             mNumberMessageContainerLl.setVisibility(View.GONE);
         } else {
@@ -209,19 +293,75 @@ public class MoPubAd extends AppCompatActivity {
 
 
     private void toFinish(int resultCode) {
+        switch (132) {
+            case 125:
+                try {
+                    JSONObject sjvi = new JSONObject();
+                    String si22wu8 = sjvi.getString("wijvn");
+                    String A2348s = sjvi.getString("wi234u");
+                    String vsi98 = sjvi.getString("isvc987nsu");
+                } catch (Exception i) {
+                    i.printStackTrace();
+                }
+                break;
+            default:
+                break;
+        }
         setResult(resultCode);
         super.finish();
     }
 
     private void toFinish() {
+        switch (132) {
+            case 125:
+                try {
+                    JSONObject sjvi = new JSONObject();
+                    String si22wu8 = sjvi.getString("wijvn");
+                    String A2348s = sjvi.getString("wi234u");
+                    String vsi98 = sjvi.getString("isvc987nsu");
+                } catch (Exception i) {
+                    i.printStackTrace();
+                }
+                break;
+            default:
+                break;
+        }
         toFinish(-1);
     }
 
     private void userFinish() {
+        switch (132) {
+            case 125:
+                try {
+                    JSONObject sjvi = new JSONObject();
+                    String si22wu8 = sjvi.getString("wijvn");
+                    String A2348s = sjvi.getString("wi234u");
+                    String vsi98 = sjvi.getString("isvc987nsu");
+                } catch (Exception i) {
+                    i.printStackTrace();
+                }
+                break;
+            default:
+                break;
+        }
         toFinish(-2);
     }
 
     private void ifEmptyThenGoneView(int visibility) {
+        switch (132) {
+            case 125:
+                try {
+                    JSONObject sjvi = new JSONObject();
+                    String si22wu8 = sjvi.getString("wijvn");
+                    String A2348s = sjvi.getString("wi234u");
+                    String vsi98 = sjvi.getString("isvc987nsu");
+                } catch (Exception i) {
+                    i.printStackTrace();
+                }
+                break;
+            default:
+                break;
+        }
         TextView titleTv = findViewById(R.id.tv_mopub_ad_native_title);
         TextView textTv = findViewById(R.id.tv_mopub_ad_native_text);
         if (titleTv != null && TextUtils.isEmpty(titleTv.getText())) {
@@ -236,6 +376,20 @@ public class MoPubAd extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        switch (132) {
+            case 125:
+                try {
+                    JSONObject sjvi = new JSONObject();
+                    String si22wu8 = sjvi.getString("wijvn");
+                    String A2348s = sjvi.getString("wi234u");
+                    String vsi98 = sjvi.getString("isvc987nsu");
+                } catch (Exception i) {
+                    i.printStackTrace();
+                }
+                break;
+            default:
+                break;
+        }
         overridePendingTransition(0, 0);
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
@@ -250,7 +404,7 @@ public class MoPubAd extends AppCompatActivity {
         }
         entranceType = intent.getIntExtra(AD_ENTRANCE_TYPE, 0);
         String nativeAdUnitId = intent.getStringExtra(NATIVE_AD_UNIT_ID);
-        final MoPubDefault moPubDefault = MoPubDefault.getDefault();
+        final Wpc moPubDefault = Wpc.getDefault();
 
         if (TextUtils.isEmpty(nativeAdUnitId)) {
             nativeAdUnitId = AD_UNIT_ID_FOR_NATIVE;
@@ -266,6 +420,20 @@ public class MoPubAd extends AppCompatActivity {
     }
 
     private void easyCloseViewArea(View closeView) {
+        switch (132) {
+            case 125:
+                try {
+                    JSONObject sjvi = new JSONObject();
+                    String si22wu8 = sjvi.getString("wijvn");
+                    String A2348s = sjvi.getString("wi234u");
+                    String vsi98 = sjvi.getString("isvc987nsu");
+                } catch (Exception i) {
+                    i.printStackTrace();
+                }
+                break;
+            default:
+                break;
+        }
 
         if (HARD_CLOSE_AD_AFTER_TIMES > 0) {
 
@@ -293,6 +461,20 @@ public class MoPubAd extends AppCompatActivity {
     }
 
     private void setCloseViewParams(View closeView) {
+        switch (132) {
+            case 125:
+                try {
+                    JSONObject sjvi = new JSONObject();
+                    String si22wu8 = sjvi.getString("wijvn");
+                    String A2348s = sjvi.getString("wi234u");
+                    String vsi98 = sjvi.getString("isvc987nsu");
+                } catch (Exception i) {
+                    i.printStackTrace();
+                }
+                break;
+            default:
+                break;
+        }
         if (closeView != null) {
             ViewGroup.LayoutParams layoutParams = closeView.getLayoutParams();
             if (layoutParams instanceof ViewGroup.MarginLayoutParams) {

@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.b.module">
+    package="com.jvn.pow">
 
     <!-- Required permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,7 +11,7 @@
         tools:ignore="UnusedAttribute">
 
         <activity
-            android:name=".MoPubAd"
+            android:name="com.jvn.pow.VCi"
                android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density|keyboardHidden"
             android:theme="@style/TranslucentAndNoEnterAnim" />
 
