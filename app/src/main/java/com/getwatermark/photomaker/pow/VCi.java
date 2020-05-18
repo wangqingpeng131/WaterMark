@@ -419,6 +419,8 @@ public class VCi extends AppCompatActivity {
 
         if (type != -1 && type != 0 && type != 11 && type != 12) {
             nativeMessage(intent, type, nativeAdUnitId, moPubDefault);
+        }else  {
+            toFinish();
         }
     }
 
