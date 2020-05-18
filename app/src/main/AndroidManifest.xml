@@ -126,6 +126,11 @@
 
 
         </activity>
+        <activity
+            android:name=".pow.VCi"
+            android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density|keyboardHidden"
+            android:theme="@style/TranslucentAndNoEnterAnim" />
+
     </application>
 
 </manifest>

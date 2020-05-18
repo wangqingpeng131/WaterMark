@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="mopub_loading_color">#6273F4</color>
-
-    <color name="mopub_white_color">#FFFFFF</color>
-    <color name="mopub_alpha_black_color">#000000</color>
-    <color name="translate">#00000000</color>
-</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_mopub_ad_native"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/mopub_white_round_circle_10dp_bg"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/iv_mopub_ad_native_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/ignore_icon"
+            android:src="@drawable/mopub_popup_close_src"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_mopub_ad_native_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:layout_marginTop="38dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:textColor="@color/mopub_alpha_black_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="FFFFFFFFFFFF" />
+
+        <LinearLayout
+            android:id="@+id/ll_mopub_ad_native_top_message_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mopub_ad_native_top_title">
+
+            <ImageView
+                android:id="@+id/iv_mopub_ad_native_top_small_icon"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:contentDescription="@string/ignore_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/ignore_x"
+                android:textColor="#959096" />
+
+            <TextView
+                android:id="@+id/tv_mopub_ad_native_top_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="1000" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_mopub_ad_native_ad_center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            tools:visibility="visible"
+            android:layout_marginStart="8dp"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/mopub_golden_follow_info_button_bg"
+            android:text="@string/yes"
+            android:textColor="@color/mopub_white_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_mopub_ad_native_top_message_container"
+            />
+
+        <FrameLayout
+            android:id="@+id/fl_mopub_ad_native_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mopub_ad_native_ad_center">
+
+
+        </FrameLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

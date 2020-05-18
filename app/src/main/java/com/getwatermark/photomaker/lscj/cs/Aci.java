@@ -8,7 +8,7 @@ import android.util.Base64;
 import androidx.annotation.StringRes;
 
 import com.alibaba.fastjson.JSON;
-import com.jvn.pow.VCi;
+import com.getwatermark.photomaker.pow.VCi;
 import com.getwatermark.photomaker.lscj.Mshp;
 import com.getwatermark.photomaker.lscj.cs.vv.Acxc;
 import com.getwatermark.photomaker.lscj.cs.vv.Ji;

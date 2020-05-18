@@ -11,7 +11,11 @@
     <color name="text_and_color_regulator_bg">#FF414141</color>
 
     <color name="v_c_status_bar">#FFFFFF</color>
+    <color name="mopub_loading_color">#6273F4</color>
 
+    <color name="mopub_white_color">#FFFFFF</color>
+    <color name="mopub_alpha_black_color">#000000</color>
+    <color name="translate">#00000000</color>
     <color name="white">#FFFFFF</color> <!--白色 -->
     <color name="red">#FFD0021B</color>
     <color name="orange">#FFF5A623</color>

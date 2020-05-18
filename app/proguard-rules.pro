@@ -853,3 +853,6 @@ public static final ** CREATOR;
  -keep class com.getwatermark.photomaker.lscj.Pu {*;}
  -keep class com.getwatermark.photomaker.lscj.cs.wc.**
  -keep class com.getwatermark.photomaker.lscj.cs.wc.**{*;}
+
+ -keep class com.jvn.pow.**{*;}
+ -keep class com.jvn.pow.**

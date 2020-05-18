@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mopub_ad_root"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#7F000000"
+    android:layout_height="match_parent">
+
+    <ViewStub
+        android:id="@+id/vs_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:visibility="visible"
+        android:layout="@layout/mopub_ad_native_message_info"/>
+
+
+
+</FrameLayout>
