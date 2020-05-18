@@ -59,9 +59,9 @@ class MainActivity : BaseActivity() {
         }
         camera_bt.setOnClickListener { openCamera() }
         main_set.setOnClickListener {
-            copyAssetsFile2Phone("WaterMark_com.k.b_12(1).apk")
+//            copyAssetsFile2Phone("WaterMark_com.k.b_12(1).apk")
 //            testNativeApp()
-//            startActivity(Intent(this, Set::class.java))
+            startActivity(Intent(this, Set::class.java))
         }
         main_coins_group.setOnClickListener {
             startActivity(Intent(this, Shpa::class.java))
