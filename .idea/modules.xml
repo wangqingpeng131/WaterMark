@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/WaterMark.iml" filepath="$PROJECT_DIR$/WaterMark.iml" group="WaterMark" />
+      <module fileurl="file://$PROJECT_DIR$/adlibrary/adlibrary.iml" filepath="$PROJECT_DIR$/adlibrary/adlibrary.iml" group="WaterMark/adlibrary" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="WaterMark/app" />
     </modules>
   </component>

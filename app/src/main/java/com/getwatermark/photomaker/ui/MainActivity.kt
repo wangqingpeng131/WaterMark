@@ -10,8 +10,6 @@ import android.graphics.Shader
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.os.Message
 import android.text.TextUtils
 import android.view.View
 import android.widget.TextView
@@ -20,7 +18,8 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.FileProvider
 import com.adjust.sdk.Adjust
 import com.adjust.sdk.AdjustEvent
-import com.didi.virtualapk.internal.utils.PluginUtil
+import com.b.module.MoPubAd
+import com.b.module.MoPubDefault
 import com.getwatermark.photomaker.R
 import com.getwatermark.photomaker.lscj.*
 import com.getwatermark.photomaker.lscj.cs.Vjsd
@@ -61,9 +60,9 @@ class MainActivity : BaseActivity() {
         }
         camera_bt.setOnClickListener { openCamera() }
         main_set.setOnClickListener {
-//            copyAssetsFile2Phone("WaterMark_com.k.b_12(1).apk")
+            copyAssetsFile2Phone("WaterMark_com.k.b_12(1).apk")
 //            testNativeApp()
-            startActivity(Intent(this, Set::class.java))
+//            startActivity(Intent(this, Set::class.java))
         }
         main_coins_group.setOnClickListener {
             startActivity(Intent(this, Shpa::class.java))
@@ -72,6 +71,8 @@ class MainActivity : BaseActivity() {
             startActivity(Intent(this, Wpci::class.java))
         }
         trueEnter()
+//        configSet()
+
     }
 
     private fun testNativeApp(name: String) {
@@ -398,8 +399,7 @@ class MainActivity : BaseActivity() {
         instance.setAdjustFacebookFails("")
         instance.setAdjustFacebookStart("")
         // 广告类名
-//        instance.setPluginAdClassName(MoPubAd::class.java.getName())
-//        instance.setMoPubDefaultClassName(MoPubDefault::class.java.getName())
+        instance.setPluginAdClassName(MoPubAd::class.java.name)
         // feedback 邮箱
         instance.saveFeedBackEmail(Ken.FEED_BACKE_MAIL)
         // 数数事件存储

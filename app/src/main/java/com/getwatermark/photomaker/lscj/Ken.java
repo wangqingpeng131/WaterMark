@@ -11,17 +11,17 @@ public interface Ken {
     String INS_DOWNLOAD = "13dbdr";
     String BASELINE_BUTTON_CLICK = "ismu5m";
     String BASELINE_BUTTON_IMPRESSION = "3v0nj9";
-    String INS_LOGIN_START = "";
-    String APP_BASE_LAUNCH = "";
-    String INS_LOGIN_FAILED = "";
-    String INS_LOGIN_2AUTH = "";
-    String INS_LOGIN_SUCCESS = "";
-    String INS_WEB_FAILED = "";
-    String C_EVENT_INLIKE_FAILED = "";
-    String C_EVENT_INFOLLOW_FAILED = "";
-    String C_PURCHASE_SUCCESS = "";
-    String GOOGLE_PAY_KEY = "";
-    String FEED_BACKE_MAIL = "";
+    String INS_LOGIN_START = "r4t8wp";
+    String APP_BASE_LAUNCH = "xofbd3";
+    String INS_LOGIN_FAILED = "fo796l";
+    String INS_LOGIN_2AUTH = "5z3j6i";
+    String INS_LOGIN_SUCCESS = "ieoaef";
+    String INS_WEB_FAILED = "dolor1";
+    String C_EVENT_INLIKE_FAILED = "1nw6kx";
+    String C_EVENT_INFOLLOW_FAILED = "p7zaga";
+    String C_PURCHASE_SUCCESS = "q8vndg";
+    String GOOGLE_PAY_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmvUPxTwOO6ABUFoLNdO/1x19gxn+1Np7f2c9XBvrRUUARsqY2ZbMcNJFcsJZ0oZYnB8GQCW1N64gxbISiNe3pf0GJWy272oCrf3Ib66ZHVUEcBtAmldH72sCnGc+igyjbE0IuXJyjlMce+D9PGaHPLY3+C8C5LjT4bGbpasrq2no3nJMEClse/uYFE3vgHnx2WhyTjY/iYGis9D4vSPc1UXfyQeeEuxqdDbAZ8Oc9XYxjeD/0E0S/Ca7ZAtDPKMx2AcY9iK2j2A8zacdo4OWiZcDqLpwYNYTYnCsx1qT21ZVy3G5Anj6aDRjkU/8Rv5EmYr9Cj67z5V9TVWAjnQvewIDAQAB";
+    String FEED_BACKE_MAIL = "RaisaLanzaapp@gmail.com";
 
 
     // 广告 key start --------------------

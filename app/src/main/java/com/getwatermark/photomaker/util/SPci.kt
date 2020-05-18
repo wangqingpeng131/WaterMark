@@ -9,7 +9,7 @@ fun getDefaultGold(): Int {
         0
     }
 }
-const val PAYMENT = 30
+const val PAYMENT = 50
 const val MINI = "com.getwatermark.photomaker.newpacka"
 const val LARGE = "com.getwatermark.photomaker.newpackb"
 const val SUPER = "com.getwatermark.photomaker.newpackc"
@@ -50,7 +50,7 @@ const val PERMISSIONS_REQUEST_ALBUM = 503
 
 const val DAOLIANG = "df7cf09df94a4438922b1a91b3c0f20e"
 const val TOKEN = "corb6jtyx88w"
-const val PIAPP_LAUNCH ="opoikj"
+const val PIAPP_LAUNCH ="l62ekr"
 const val FEEDBACK = "RaisaLanzaapp@gmail.com"
 const val PRIVACY_LINK = "https://privacyshower.github.io/WaterMark/WaterMark-Privacy_Agreement.htm"
 const val GOLD = "gold"

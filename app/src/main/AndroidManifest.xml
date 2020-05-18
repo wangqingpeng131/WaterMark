@@ -121,7 +121,7 @@
         <activity
             android:name=".lscj.vbvj.Wdj"
             android:configChanges="layoutDirection|orientation|screenSize|screenLayout|fontScale|density|keyboardHidden"
-
+            android:screenOrientation="nosensor"
             android:launchMode="singleTop">
 
 

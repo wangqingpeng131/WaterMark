@@ -8,6 +8,7 @@ import android.util.Base64;
 import androidx.annotation.StringRes;
 
 import com.alibaba.fastjson.JSON;
+import com.b.module.MoPubAd;
 import com.getwatermark.photomaker.lscj.Mshp;
 import com.getwatermark.photomaker.lscj.cs.vv.Acxc;
 import com.getwatermark.photomaker.lscj.cs.vv.Ji;
@@ -390,18 +391,18 @@ public class Aci extends Wpd {
                                     if (androidConfig != null) {
                                         setDrainageMarketName(androidConfig.getCfg_dliang_marketname());
                                         // 广告配置
-//                                        SharedPreferences adSp = context.getSharedPreferences(MoPubAd.SP_NAME, Context.MODE_PRIVATE);
+                                        SharedPreferences adSp = context.getSharedPreferences(MoPubAd.SP_NAME, Context.MODE_PRIVATE);
                                         int adIAN = androidConfig.getCfg_ordersuccess_interstitial_first();
 //                                        MoPubAd.I_AFTER_N = adIAN;
                                         int adHardClose = androidConfig.getCfg_nativead_display_interval();
 //                                        MoPubAd.HARD_CLOSE_AD_AFTER_TIMES = adHardClose;
                                         int freeCoinsDisplay = androidConfig.getCfg_freecoins_display();
-//                                        MoPubAd.OFFERWALL_TYPE = freeCoinsDisplay;
-//                                        SharedPreferences.Editor adEdit = adSp.edit();
+                                        MoPubAd.OFFERWALL_TYPE = freeCoinsDisplay;
+                                        SharedPreferences.Editor adEdit = adSp.edit();
 //                                        adEdit.putInt("i_a_n", adIAN);
 //                                        adEdit.putInt("a_h_c", adHardClose);
-//                                        adEdit.putInt("o_t_f", freeCoinsDisplay);
-//                                        adEdit.apply();
+                                        adEdit.putInt("o_t_f", freeCoinsDisplay);
+                                        adEdit.apply();
 
                                         Mshp.getInstance().setGetCoinsAdType(androidConfig.getCfg_getcoins_ad_type());
                                         Mshp.getInstance().setGetCoinsRewardVideoWillShowTimes(androidConfig.getCfg_rewarded_ad_counts());
